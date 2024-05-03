@@ -1,0 +1,6 @@
+discord.js
+chalk
+path
+fs
+concurrently
+cli-color

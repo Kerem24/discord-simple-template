@@ -1,0 +1,28 @@
+{
+  "name": "simplebot-discordjs",
+  "version": "1.0.0",
+  "description": "A simple bot made by using discord.js. This project made by 1louch.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "concurrently \"node src/index.js\" \"node src/deploy-commands.js\""
+  },
+  "author": "1louch",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/core": "^1.1.1",
+    "chalk": "^5.3.0",
+    "cli-color": "^2.0.4",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
+    "url": "^0.11.3",
+    "zod": "^3.23.6"
+  },
+  "devDependencies": {
+    "@types/cli-color": "^2.0.6",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.1.1"
+  }
+}

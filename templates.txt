@@ -1,0 +1,31 @@
+// Command
+
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+
+module.exports = {
+    data: new SlashCommandBuilder()
+    .setName("cmd")
+    .setDescription("A template for the commands")
+    .setDMPermission(false)
+    .addIntegerOption(option => option.setName("number").setDescription("A int variable").setRequired(false)),
+
+    async execute(client, interaction) {
+        const number = interaction.options.getInteger("number") || "Not specified";
+        await interaction.reply(`The number you wanted to provide: ${number}`);
+    }
+}
+
+// Event
+
+const { Events } = require("discord.js");
+const clc = require("cli-color");
+
+
+module.exports = {
+  name: Events.ChannelDelete,
+  once: true,
+  execute(client) {
+    console.log(clc.yellowBright(`A channel deleted.`));
+    client.user.setActivity("a channel deleted");
+  },
+};
